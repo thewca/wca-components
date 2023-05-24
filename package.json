@@ -1,0 +1,26 @@
+{
+  "name": "wca-components",
+  "version": "0.1.0",
+  "description": "The WCA React Component Library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thewca/wca-components.git"
+  },
+  "author": "WCA Software Team",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/thewca/wca-components/issues"
+  },
+  "homepage": "https://github.com/thewca/wca-components/README.md",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "esbuild": "^0.17.19",
+    "esbuild-sass-plugin": "^2.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
