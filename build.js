@@ -1,5 +1,4 @@
 const { build } = require("esbuild");
-const { dependencies } = require("./package.json");
 const { sassPlugin } = require('esbuild-sass-plugin')
 
 const entryFile = "src/index.ts";
@@ -8,7 +7,6 @@ const shared = {
     entryPoints: [entryFile],
     logLevel: "info",
     minify: true,
-    external: Object.keys(dependencies),
     sourcemap: true,
     plugins: [sassPlugin()]
 };
