@@ -1,5 +1,6 @@
 const { build } = require("esbuild");
 const { sassPlugin } = require('esbuild-sass-plugin')
+const { nodeExternalsPlugin } = require('esbuild-node-externals');
 
 const entryFile = "src/index.ts";
 const shared = {
@@ -8,7 +9,7 @@ const shared = {
     logLevel: "info",
     minify: true,
     sourcemap: true,
-    plugins: [sassPlugin()]
+    plugins: [sassPlugin(), nodeExternalsPlugin()]
 };
 
 build({
