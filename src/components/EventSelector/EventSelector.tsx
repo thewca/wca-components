@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import CubingIcon from '../CubingIcon'
 import './eventselector.scss'
-import {WCAEvent} from "../CubingIcon/CubingIcon";
+import { IconSize, WCAEvent } from '../CubingIcon/CubingIcon'
 
 type handleEventSelectionCallback = (events: WCAEvent[]) => void
 
 interface EventSelectorProps{
     handleEventSelection: handleEventSelectionCallback,
-    initialSelected: WCAEvent[]
-    events: WCAEvent[]
+    initialSelected: WCAEvent[],
+    events: WCAEvent[],
+    size: IconSize
 }
 
-export default function EventSelector({ handleEventSelection, events, initialSelected }: EventSelectorProps) {
+export default function EventSelector({ handleEventSelection, events, initialSelected, size='2x' }: EventSelectorProps) {
     const [selectedEvents, setSelectedEvents] = useState<WCAEvent[]>(initialSelected)
 
     const handleEventToggle = (event: WCAEvent) => {
@@ -51,7 +52,7 @@ export default function EventSelector({ handleEventSelection, events, initialSel
                     <CubingIcon
                         event={wca_event}
                         selected={selectedEvents.includes(wca_event)}
-                        size="2x"
+                        size={size}
                     />
                     <input
                         className="event-checkbox"
