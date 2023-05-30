@@ -27,8 +27,25 @@ export default function EventSelector({ handleEventSelection, events, initialSel
             handleEventSelection(new_events)
         }
     }
+
+    const setAllEvents = () => {
+        setSelectedEvents(events)
+        handleEventSelection(events)
+    }
+
+    const clearAllEvents = () => {
+        setSelectedEvents([])
+        handleEventSelection([])
+    }
+
     return (
         <div className="event-selection-container">
+            <div className="side-bar">
+                Events ({selectedEvents.length}) <br/>
+                <button className="all-button" onClick={setAllEvents}> All </button>
+                <button className="clear-button" onClick={clearAllEvents}> Clear </button>
+            </div>
+            <div className="event-bar">
             {events.map((wca_event) => (
                 <label key={wca_event} className="event-label">
                     <CubingIcon
@@ -45,6 +62,7 @@ export default function EventSelector({ handleEventSelection, events, initialSel
                     />
                 </label>
             ))}
+            </div>
         </div>
     )
 }
