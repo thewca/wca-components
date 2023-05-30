@@ -12,30 +12,33 @@
   display: flex;
   padding-left: 15px;
 }
-button{
+.event-selector-button{
   cursor: pointer;
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
+
 .all-button{
+  @extend .event-selector-button;
   color: #fff;
   background-color: #375e97;
   border-color: #305284;
-}
-.all-button:hover{
-  color: #fff;
-  background-color: #294772;
-  border-color: #203657;
+  &:hover{
+    color: #fff;
+    background-color: #294772;
+    border-color: #203657;
+  }
 }
 .clear-button{
+  @extend .event-selector-button;
   color: #333;
   background-color: #fff;
   border-color: #ccc;
-}
-.clear-button:hover{
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  &:hover{
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+  }
 }
