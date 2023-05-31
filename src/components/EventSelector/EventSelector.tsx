@@ -1,21 +1,22 @@
 import React, { useState } from 'react'
 import CubingIcon from '../CubingIcon'
 import './eventselector.scss'
-import { IconSize, WCAEvent } from '../CubingIcon/CubingIcon'
+import { IconSize } from '../CubingIcon/CubingIcon'
+import { EventId } from '@wca/helpers'
 
-type handleEventSelectionCallback = (events: WCAEvent[]) => void
+type handleEventSelectionCallback = (events: EventId[]) => void
 
 interface EventSelectorProps{
     handleEventSelection: handleEventSelectionCallback,
-    initialSelected: WCAEvent[],
-    events: WCAEvent[],
+    initialSelected: EventId[],
+    events: EventId[],
     size: IconSize
 }
 
 export default function EventSelector({ handleEventSelection, events, initialSelected, size='2x' }: EventSelectorProps) {
-    const [selectedEvents, setSelectedEvents] = useState<WCAEvent[]>(initialSelected)
+    const [selectedEvents, setSelectedEvents] = useState<EventId[]>(initialSelected)
 
-    const handleEventToggle = (event: WCAEvent) => {
+    const handleEventToggle = (event: EventId) => {
         if (selectedEvents.includes(event)) {
             const new_events = selectedEvents.filter(
                 (selectedEvent) => selectedEvent !== event
