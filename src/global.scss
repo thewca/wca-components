@@ -1,11 +1,3 @@
 body {
   font-family: Roboto, Helvetica Neue, Arial, Helvetica, sans-serif;
 }
-
-// Override the footer alignment as we don't have the same container width as
-// on other pages.
-footer {
-  .container.footer-links {
-    text-align: center;
-  }
-}

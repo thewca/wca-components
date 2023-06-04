@@ -1,4 +1,4 @@
-import './index.scss'
+import './eventselector.scss'
 import { EventId } from '@wca/helpers'
 import React, { useState } from 'react'
 import CubingIcon from '../CubingIcon'

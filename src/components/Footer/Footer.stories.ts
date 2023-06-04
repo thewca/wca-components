@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import Footer from './index'
+import Footer from './Footer'
 
 const meta: Meta<typeof Footer> = {
   title: 'WCA-Components/Footer',

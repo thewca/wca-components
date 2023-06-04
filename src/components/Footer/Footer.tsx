@@ -1,6 +1,6 @@
-import './index.scss'
+import './footer.scss'
 import React from 'react'
-import UiIcon from '../UiIcon'
+import UiIcon from '../UiIcon/UiIcon'
 
 interface Link {
   title: string

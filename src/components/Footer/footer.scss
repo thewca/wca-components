@@ -1,0 +1,7 @@
+// Override the footer alignment as we don't have the same container width as
+// on other pages.
+footer {
+  .container.footer-links {
+    text-align: center;
+  }
+}
