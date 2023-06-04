@@ -1,18 +1,18 @@
-.event-selection-container{
+.event-selection-container {
   display: flex;
 }
-.event-checkbox{
+.event-checkbox {
   display: none;
 }
-.event-label{
+.event-label {
   margin-right: 15px;
   cursor: pointer;
 }
-.event-bar{
+.event-bar {
   display: flex;
   padding-left: 15px;
 }
-.event-selector-button{
+.event-selector-button {
   cursor: pointer;
   padding: 1px 5px;
   font-size: 12px;
@@ -20,23 +20,23 @@
   border-radius: 3px;
 }
 
-.all-button{
+.all-button {
   @extend .event-selector-button;
   color: #fff;
   background-color: #375e97;
   border-color: #305284;
-  &:hover{
+  &:hover {
     color: #fff;
     background-color: #294772;
     border-color: #203657;
   }
 }
-.clear-button{
+.clear-button {
   @extend .event-selector-button;
   color: #333;
   background-color: #fff;
   border-color: #ccc;
-  &:hover{
+  &:hover {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad;

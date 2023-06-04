@@ -1,1 +1,1 @@
-export { default } from "./CubingIcon";
+export { default } from './CubingIcon'
