@@ -48,7 +48,7 @@ export const MainWebsite: Story = {
             title: 'Regionals Organizations',
           },
           {
-            divider: true,
+            isDivider: true,
           },
           {
             path: '/faq',
@@ -86,11 +86,11 @@ export const MainWebsite: Story = {
             title: 'Disclaimer',
           },
           {
-            divider: true,
+            isDivider: true,
           },
           {
             path: '/score-tools',
-            icon: 'wrtench',
+            icon: 'wrench',
             title: 'Tools',
           },
           {

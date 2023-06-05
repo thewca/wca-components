@@ -5,14 +5,14 @@ interface Item {
   path: string
   title: string
   icon: string
+  isDivider?: false
 }
 
 interface Divider {
-  divider: true
+  isDivider: true
 }
 
-// eslint-disable-next-line no-prototype-builtins
-const isDivider = (item: object) => item.hasOwnProperty('divider')
+const isDivider = (item: Item | Divider) => item.isDivider
 
 export interface DropdownProps {
   active?: boolean
