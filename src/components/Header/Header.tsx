@@ -1,30 +1,13 @@
 import './header.scss'
 import React from 'react'
-import UiIcon from '../UiIcon/UiIcon'
-
-type Item = {
-  path: string
-  title: string
-  icon: string
-}
-
-type Divider = {
-  divider: true
-}
-
-type Dropdown = {
-  active?: true
-  icon: string
-  title: string
-  items: (Item | Divider)[]
-}
+import Dropdown, { DropdownProps } from './Dropdown'
 
 interface HeaderProps {
   brandImage: string
-  dropdowns: Dropdown[]
+  dropdowns: DropdownProps[]
 }
 
-export default function Footer({ brandImage, dropdowns }: HeaderProps) {
+export default function Header({ brandImage, dropdowns }: HeaderProps) {
   return (
     <div className="navbar navbar-default navbar-static-top" role="navigation">
       <div className="brand">
@@ -50,29 +33,7 @@ export default function Footer({ brandImage, dropdowns }: HeaderProps) {
             </a>
           </li>
           {dropdowns.map((dropdown) => {
-            return (
-              <li className={`dropdown ${dropdown.active ? 'active' : ''}`}>
-                <a href="#" className="dropdown-toggle top-nav">
-                  <UiIcon name={dropdown.icon} />
-                  <span className="hidden-sm hidden-md">{dropdown.title}</span>
-                  <span className="caret"></span>
-                  <ul className="dropdown-menu" role="menu">
-                    {dropdown.items.map((item) => {
-                      if ((item as Divider).divider) {
-                        return <li className="divider"></li>
-                      } else {
-                        return (
-                          <a href={(item as Item).path}>
-                            <UiIcon name={(item as Item).icon} />{' '}
-                            {(item as Item).title}
-                          </a>
-                        )
-                      }
-                    })}
-                  </ul>
-                </a>
-              </li>
-            )
+            return <Dropdown key={dropdown.title} {...dropdown} />
           })}
           {/*          <li class="dropdown <%= (params[:controller] == 'static_pages' && params[:action] != 'homepage') ? 'active' : '' %>">*/}
           {/*            <a href="#" class="dropdown-toggle top-nav" data-toggle="dropdown" data-hover="dropdown">*/}
