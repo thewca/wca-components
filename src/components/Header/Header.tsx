@@ -21,9 +21,9 @@ export default function Header({ brandImage, dropdowns }: HeaderProps) {
         data-toggle="collapse"
         data-target=".navbar-collapse"
       >
-        <span className="icon-bar"></span>
-        <span className="icon-bar"></span>
-        <span className="icon-bar"></span>
+        <span className="icon-bar" />
+        <span className="icon-bar" />
+        <span className="icon-bar" />
       </button>
       <div className="navbar-collapse collapse disabled">
         <ul className="nav navbar-nav">

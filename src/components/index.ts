@@ -1,5 +1,5 @@
 export { default as CubingIcon } from './CubingIcon'
+export { default as EventSelector } from './EventSelector'
 export { default as Footer } from './Footer'
 export { default as Header } from './Header'
 export { default as UiIcon } from './UiIcon'
-export { default as EventSelector } from './EventSelector'
