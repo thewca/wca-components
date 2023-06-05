@@ -19,23 +19,14 @@ export const MainWebsite: Story = {
       {
         title: 'About Us',
         path: '/about',
-        cssClass: null,
-        target: null,
-        icon: null,
       },
       {
         title: 'FAQ',
         path: '/faq',
-        cssClass: null,
-        target: null,
-        icon: null,
       },
       {
         title: 'Contact',
         path: '/contact/website',
-        cssClass: null,
-        target: null,
-        icon: null,
       },
       {
         title: 'Github',
@@ -47,16 +38,10 @@ export const MainWebsite: Story = {
       {
         title: 'Privacy',
         path: '/privacy',
-        cssClass: null,
-        target: null,
-        icon: null,
       },
       {
         title: 'Disclaimer',
         path: '/disclaimer',
-        cssClass: null,
-        target: null,
-        icon: null,
       },
     ],
   },

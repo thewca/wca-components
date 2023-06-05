@@ -5,9 +5,9 @@ import UiIcon from '../UiIcon/UiIcon'
 interface Link {
   title: string
   path: string
-  cssClass: string | null
-  target: string | null
-  icon: boolean | null
+  cssClass?: string
+  target?: string
+  icon?: boolean
 }
 
 interface FooterProps {
