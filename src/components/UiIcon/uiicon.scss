@@ -1,19 +1,21 @@
 .ui-icon-1x {
-  font-size: 1em;
+  font-size: 1em !important;
 }
 .ui-icon-2x {
-  font-size: 2em;
+  font-size: 2em !important;
 }
 .ui-icon-3x {
-  font-size: 3em;
+  font-size: 3em !important;
 }
 .ui-icon-4x {
-  font-size: 4em;
+  font-size: 4em !important;
 }
 .ui-icon-5x {
-  font-size: 5em;
+  font-size: 5em !important;
 }
 
-//.wca-logo:after{
-//  content: url("./WCA Logo 2020.svg");
-//}
+.wca{
+  background-image: url("../../stories/assets/WCA Logo 2020.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}

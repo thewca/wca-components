@@ -165,19 +165,19 @@
     content: '\EA30';
   }
 }
-
+// Overwrite semantic ui standards
 .cubing-icon-1x {
-  font-size: 1em;
+  font-size: 1em !important;
 }
 .cubing-icon-2x {
-  font-size: 2em;
+  font-size: 2em !important;
 }
 .cubing-icon-3x {
-  font-size: 3em;
+  font-size: 3em !important;
 }
 .cubing-icon-4x {
-  font-size: 4em;
+  font-size: 4em !important;
 }
 .cubing-icon-5x {
-  font-size: 5em;
+  font-size: 5em !important;
 }
