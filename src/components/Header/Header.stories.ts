@@ -15,7 +15,7 @@ type Story = StoryObj<typeof Header>
 export const MainWebsite: Story = {
   // More on args: https://storybook.js.org/docs/react/writing-stories/args
   args: {
-    brandImage: '/WCA Logo 2020.svg',
+    brandImage: '/wca2020.svg',
     dropdowns: [
       {
         active: true,
