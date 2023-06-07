@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import UiIcon from '../UiIcon'
 
 interface Item {
@@ -6,6 +7,7 @@ interface Item {
   title: string
   icon: string
   isDivider?: false
+  reactRoute?: boolean
 }
 
 interface Divider {
@@ -28,15 +30,12 @@ export default function Dropdown({
   items,
 }: DropdownProps) {
   const [hovered, setHovered] = useState(false)
-  const toggleHover = () => setHovered(!hovered)
-
   const close = () => setHovered(false)
-
   return (
     <li
       className={`dropdown ${active ? 'active' : ''} ${hovered ? 'open' : ''}`}
-      onMouseEnter={toggleHover}
-      onMouseLeave={toggleHover}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a href="#" onClick={close} className="dropdown-toggle top-nav">
@@ -50,11 +49,17 @@ export default function Dropdown({
             // eslint-disable-next-line react/no-array-index-key
             return <li key={`divider-${index}`} className="divider" />
           }
+          // Now we know we have an item
+          const { title, reactRoute, path, icon } = item as Item
           return (
-            <li key={(item as Item).title}>
-              <a href={(item as Item).path}>
-                <UiIcon name={(item as Item).icon} /> {(item as Item).title}
-              </a>
+            <li key={title}>
+              {reactRoute ? (
+                <Link to={path} title={title} />
+              ) : (
+                <a href={path}>
+                  <UiIcon name={icon} /> {title}
+                </a>
+              )}
             </li>
           )
         })}
