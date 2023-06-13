@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import NonInteractiveList from './NonInteractiveList'
+import NonInteractiveTable from './NonInteractiveTable'
 
-const meta: Meta<typeof NonInteractiveList> = {
-  title: 'WCA-Components/NonInteractiveList',
-  component: NonInteractiveList,
+const meta: Meta<typeof NonInteractiveTable> = {
+  title: 'WCA-Components/NonInteractiveTable',
+  component: NonInteractiveTable,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 }
 export default meta
 
-type Story = StoryObj<typeof NonInteractiveList>
+type Story = StoryObj<typeof NonInteractiveTable>
 
 export const Competitors: Story = {
   // More on args: https://storybook.js.org/docs/react/writing-stories/args

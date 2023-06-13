@@ -1,4 +1,4 @@
-import './noninteractivelist.scss'
+import './noninteractivetable.scss'
 import { EventId } from '@wca/helpers'
 import React from 'react'
 import CubingIcon from '../CubingIcon'
@@ -24,7 +24,7 @@ interface ListProps {
   loading: boolean
 }
 
-export default function NonInteractiveList({
+export default function NonInteractiveTable({
   rows,
   header,
   loading,

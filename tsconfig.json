@@ -9,7 +9,7 @@
     "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
     "isolatedModules": true, // Unconditionally emit imports for unresolved files
     "jsx": "react", // Support JSX in .tsx files
-    "lib": ["dom", "dom.iterable", "esnext"], // NonInteractiveList of library files to be included in the compilation
+    "lib": ["dom", "dom.iterable", "esnext"], // NonInteractiveTable of library files to be included in the compilation
     "module": "esnext", // Specify module code generation
     "moduleResolution": "node", // Resolve modules using Node.js style
     "noEmit": false, // Do not emit output (meaning do not compile code, only perform type checking)
