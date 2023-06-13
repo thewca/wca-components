@@ -24,15 +24,21 @@ export const Competitors: Story = {
     ],
     rows: [
       [
-        { title: 'AJ  Blair' },
-        { title: 'United States' },
+        {
+          title: 'AJ  Blair',
+          link: 'https://www.worldcubeassociation.org/persons/2009BLAI01',
+        },
+        { title: 'United States', flag: 'us' },
         { title: '333', icon: true },
         { title: '' },
         { title: '1' },
       ],
       [
-        { title: 'Rebecca Hebert' },
-        { title: 'United States' },
+        {
+          title: 'Rebecca Hebert',
+          link: 'https://www.worldcubeassociation.org/persons/2023HEBE02',
+        },
+        { title: 'United States', flag: 'us' },
         { title: '333', icon: true },
         { title: '777', icon: true },
         { title: '2' },
@@ -45,5 +51,41 @@ export const Competitors: Story = {
       '1',
       '',
     ],
+  },
+}
+
+export const Rankings: Story = {
+  // More on args: https://storybook.js.org/docs/react/writing-stories/args
+  args: {
+    header: [
+      { title: '#' },
+      { title: 'Name' },
+      { title: 'Result' },
+      { title: 'Citizen of' },
+      { title: 'Competition' },
+    ],
+    rows: [
+      [
+        { title: '1' },
+        {
+          title: 'Max Park',
+          link: 'https://worldcubeassociation.org/persons/2012PARK03',
+        },
+        { title: '3.13' },
+        { title: 'United States', flag: 'us' },
+        { title: 'Pride in Long Beach 2023', flag: 'us' },
+      ],
+      [
+        { title: '2' },
+        {
+          title: 'Yusheng Du (杜宇生)',
+          link: 'https://www.worldcubeassociation.org/persons/2015DUYU01',
+        },
+        { title: '3.47' },
+        { title: 'China', flag: 'cn' },
+        { title: 'Wuhu Open 2018', flag: 'cn' },
+      ],
+    ],
+    footer: [],
   },
 }

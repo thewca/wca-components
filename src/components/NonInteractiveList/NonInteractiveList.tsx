@@ -2,12 +2,14 @@ import './noninteractivelist.scss'
 import { EventId } from '@wca/helpers'
 import React from 'react'
 import CubingIcon from '../CubingIcon'
+import FlagIcon from '../FlagIcon/FlagIcon'
 
 interface ListItem {
   title: string
   cssClass?: string
-  target?: string
+  flag?: string
   icon?: boolean
+  link?: string
 }
 
 interface HeaderItem {
@@ -71,11 +73,15 @@ export default function NonInteractiveList({
                       <tr key={`row-${items[0].title}`}>
                         {items.map((item) => (
                           <td key={item.title} className={item.cssClass}>
+                            {item.flag ? <FlagIcon iso2={item.flag} /> : ''}
                             {item.icon ? (
                               <CubingIcon
                                 event={item.title as EventId}
                                 selected={true}
                               />
+                            ) : // eslint-disable-next-line unicorn/no-nested-ternary
+                            item.link ? (
+                              <a href={item.link}>{item.title}</a>
                             ) : (
                               item.title
                             )}
