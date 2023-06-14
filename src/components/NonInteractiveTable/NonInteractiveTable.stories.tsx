@@ -16,32 +16,32 @@ export const Competitors: Story = {
   // More on args: https://storybook.js.org/docs/react/writing-stories/args
   args: {
     header: [
-      { title: 'Name' },
-      { title: 'Citizen of' },
-      { title: '333', icon: true },
-      { title: '777', icon: true },
-      { title: 'Total' },
+      { text: 'Name' },
+      { text: 'Citizen of' },
+      { text: '333', cubingIcon: true },
+      { text: '777', cubingIcon: true },
+      { text: 'Total' },
     ],
     rows: [
       [
         {
-          title: 'AJ  Blair',
+          text: 'AJ  Blair',
           link: 'https://www.worldcubeassociation.org/persons/2009BLAI01',
         },
-        { title: 'United States', flag: 'us' },
-        { title: '333', icon: true },
-        { title: '' },
-        { title: '1' },
+        { text: 'United States', flag: 'us' },
+        { text: '333', cubingIcon: true },
+        { text: '' },
+        { text: '1' },
       ],
       [
         {
-          title: 'Rebecca Hebert',
+          text: 'Rebecca Hebert',
           link: 'https://www.worldcubeassociation.org/persons/2023HEBE02',
         },
-        { title: 'United States', flag: 'us' },
-        { title: '333', icon: true },
-        { title: '777', icon: true },
-        { title: '2' },
+        { text: 'United States', flag: 'us' },
+        { text: '333', cubingIcon: true },
+        { text: '777', cubingIcon: true },
+        { text: '2' },
       ],
     ],
     footer: [
@@ -58,32 +58,40 @@ export const Rankings: Story = {
   // More on args: https://storybook.js.org/docs/react/writing-stories/args
   args: {
     header: [
-      { title: '#' },
-      { title: 'Name' },
-      { title: 'Result' },
-      { title: 'Citizen of' },
-      { title: 'Competition' },
+      { text: '#' },
+      { text: 'Name' },
+      { text: 'Result' },
+      { text: 'Citizen of' },
+      { text: 'Competition' },
     ],
     rows: [
       [
-        { title: '1' },
+        { text: '1' },
         {
-          title: 'Max Park',
+          text: 'Max Park',
           link: 'https://worldcubeassociation.org/persons/2012PARK03',
         },
-        { title: '3.13' },
-        { title: 'United States', flag: 'us' },
-        { title: 'Pride in Long Beach 2023', flag: 'us' },
+        { text: '3.13' },
+        { text: 'United States', flag: 'us' },
+        {
+          text: 'Pride in Long Beach 2023',
+          flag: 'us',
+          link: 'https://www.worldcubeassociation.org/competitions/PrideInLongBeach2023',
+        },
       ],
       [
-        { title: '2' },
+        { text: '2' },
         {
-          title: 'Yusheng Du (杜宇生)',
+          text: 'Yusheng Du (杜宇生)',
           link: 'https://www.worldcubeassociation.org/persons/2015DUYU01',
         },
-        { title: '3.47' },
-        { title: 'China', flag: 'cn' },
-        { title: 'Wuhu Open 2018', flag: 'cn' },
+        { text: '3.47' },
+        { text: 'China', flag: 'cn' },
+        {
+          text: 'Wuhu Open 2018',
+          flag: 'cn',
+          link: 'https://www.worldcubeassociation.org/competitions/WuhuOpen2018',
+        },
       ],
     ],
     footer: [],

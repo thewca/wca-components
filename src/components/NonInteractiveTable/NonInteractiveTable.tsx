@@ -2,23 +2,23 @@ import './noninteractivetable.scss'
 import { EventId } from '@wca/helpers'
 import React from 'react'
 import CubingIcon from '../CubingIcon'
-import FlagIcon from '../FlagIcon/FlagIcon'
+import FlagIcon from '../FlagIcon'
 
-interface ListItem {
-  title: string
+interface TableItem {
+  text: string
   cssClass?: string
   flag?: string
-  icon?: boolean
+  cubingIcon?: boolean
   link?: string
 }
 
 interface HeaderItem {
-  title: string
-  icon?: boolean
+  text: string
+  cubingIcon?: boolean
 }
 
 interface ListProps {
-  rows: ListItem[][]
+  rows: TableItem[][]
   header: HeaderItem[]
   footer: string[]
   loading: boolean
@@ -35,30 +35,28 @@ export default function NonInteractiveTable({
       <div className="bootstrap-table">
         <div className="fixed-table-container">
           {loading ? (
-            <div className="fixed-table-loading" style={{ top: '34.8px' }}>
-              Loading, please wait...
-            </div>
+            <div className="fixed-table-loading">Loading, please wait...</div>
           ) : (
             <div className="fixed-table-body">
               <div aria-hidden="true" className="floatThead-container">
                 <table className="table table-condensed floatThead table-hover table-striped table-greedy-last-column floatThead-table bs-table">
                   <colgroup>
                     {header.map((item) => (
-                      <col key={item.title} className="floatThead-col" />
+                      <col key={item.text} className="floatThead-col" />
                     ))}
                   </colgroup>
                   <thead>
                     <tr>
                       {header.map((item) => (
-                        <th key={item.title} className="name" data-field="name">
+                        <th key={item.text} className="name" data-field="name">
                           <div className="th-inner sortable both asc">
-                            {item.icon ? (
+                            {item.cubingIcon ? (
                               <CubingIcon
-                                event={item.title as EventId}
+                                event={item.text as EventId}
                                 selected={true}
                               />
                             ) : (
-                              item.title
+                              item.text
                             )}
                           </div>
                           <div className="fht-cell" />
@@ -70,20 +68,20 @@ export default function NonInteractiveTable({
                   </thead>
                   <tbody>
                     {rows.map((items) => (
-                      <tr key={`row-${items[0].title}`}>
+                      <tr key={`row-${items[0].text}`}>
                         {items.map((item) => (
-                          <td key={item.title} className={item.cssClass}>
+                          <td key={item.text} className={item.cssClass}>
                             {item.flag ? <FlagIcon iso2={item.flag} /> : ''}
-                            {item.icon ? (
+                            {item.cubingIcon ? (
                               <CubingIcon
-                                event={item.title as EventId}
+                                event={item.text as EventId}
                                 selected={true}
                               />
                             ) : // eslint-disable-next-line unicorn/no-nested-ternary
                             item.link ? (
-                              <a href={item.link}>{item.title}</a>
+                              <a href={item.link}>{item.text}</a>
                             ) : (
-                              item.title
+                              item.text
                             )}
                           </td>
                         ))}

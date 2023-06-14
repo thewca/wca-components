@@ -17,8 +17,9 @@ export default function CubingIcon({
 }: CubingIconProps) {
   return (
     <i
-      className={`icon cubing-icon event-${event} cubing-icon-${size}`}
-      style={{ color: `${selected ? 'rgb(0, 0, 0)' : 'rgb(204, 204, 204)'}` }}
+      className={`icon cubing-icon event-${event} cubing-icon-${size} ${
+        selected ? 'cubing-icon-selected' : 'cubing-icon-unselected'
+      }`}
     />
   )
 }
