@@ -120,6 +120,15 @@ export default function Sidebar({ items }: SidebarProps) {
             >
               <UiIcon name={item.iconName} />
               {item.title}
+              {item.rightLabel ? (
+                <span
+                  className={`pull-right label label-${item.rightLabel.kind}`}
+                >
+                  {item.rightLabel.text}
+                </span>
+              ) : (
+                ''
+              )}
             </a>
           )
         })}
