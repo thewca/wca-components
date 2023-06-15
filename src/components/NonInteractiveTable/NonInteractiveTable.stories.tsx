@@ -49,7 +49,28 @@ export const Competitors: Story = {
       '1 Country',
       '2',
       '1',
-      '',
+      '3',
+    ],
+  },
+}
+
+export const Empty: Story = {
+  // More on args: https://storybook.js.org/docs/react/writing-stories/args
+  args: {
+    header: [
+      { text: 'Name' },
+      { text: 'Citizen of' },
+      { text: '333', cubingIcon: true },
+      { text: '777', cubingIcon: true },
+      { text: 'Total' },
+    ],
+    rows: [],
+    footer: [
+      '0 first-timers + 0 Returners = 0 People',
+      '0 Countries',
+      '0',
+      '0',
+      '0',
     ],
   },
 }
