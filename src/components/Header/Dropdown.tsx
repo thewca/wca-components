@@ -54,7 +54,9 @@ export default function Dropdown({
           return (
             <li key={title}>
               {reactRoute ? (
-                <Link to={path} title={title} />
+                <Link to={path}>
+                  <UiIcon name={icon} /> {title}
+                </Link>
               ) : (
                 <a href={path}>
                   <UiIcon name={icon} /> {title}
