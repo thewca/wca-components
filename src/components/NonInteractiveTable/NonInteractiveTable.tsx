@@ -22,18 +22,15 @@ interface ListProps {
   rows: TableItem[][]
   header: HeaderItem[]
   footer: string[]
-  loading: boolean
 }
 
+// TODO: Split this into Registration Table, Results Table, etc.
 export default function NonInteractiveTable({
   rows,
   header,
-  loading,
   footer,
 }: ListProps) {
-  return loading ? (
-    <div className="fixed-table-loading">Loading, please wait...</div>
-  ) : (
+  return (
     <Table striped>
       <Table.Header>
         <Table.Row>
