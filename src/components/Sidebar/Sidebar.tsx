@@ -1,9 +1,9 @@
 import './sidebar.scss'
 import { EventId } from '@wca/helpers'
 import React, { Fragment, useState } from 'react'
+import { Link } from 'react-router-dom'
 import CubingIcon from '../CubingIcon'
 import UiIcon from '../UiIcon'
-import { Link } from 'react-router-dom'
 
 interface Label {
   text: string
