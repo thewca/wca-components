@@ -1,26 +1,15 @@
 body {
   font-family: Roboto, Helvetica Neue, Arial, Helvetica, sans-serif;
 }
-a,
-.panel-warning>.heading-as-link:hover,
-.panel-info>.heading-as-link:hover {
-  color:#e64503 !important;
-  text-decoration:none
+a, a:hover {
+  text-decoration: none;
 }
-a:hover,
-.panel-warning>.heading-as-link:hover,
-.panel-info>.heading-as-link:hover,
-a:focus,
-a.StripeElement--focus {
-  color:#9a2e02 !important;
-  text-decoration:underline
+a:hover {
+  color: #c63a00;
 }
-a:focus,
-a.StripeElement--focus,
-.panel-warning>.heading-as-link:focus:hover,
-.panel-warning>.heading-as-link.StripeElement--focus:hover,
-.panel-info>.heading-as-link:focus:hover,
-.panel-info>.heading-as-link.StripeElement--focus:hover {
-  outline:5px auto -webkit-focus-ring-color;
-  outline-offset:-2px
+a {
+  color: #e64503;
+}
+a {
+  background-color: transparent;
 }

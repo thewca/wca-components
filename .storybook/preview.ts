@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react'
-import '../src/global.scss'
 import 'fomantic-ui-css/semantic.css'
+import '../src/global.scss'
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
