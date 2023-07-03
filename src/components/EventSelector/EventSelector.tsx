@@ -1,6 +1,6 @@
 import './eventselector.scss'
 import { EventId } from '@wca/helpers'
-import React, { useState } from 'react'
+import React from 'react'
 import CubingIcon from '../CubingIcon'
 import { IconSize } from '../CubingIcon/CubingIcon'
 
@@ -8,48 +8,41 @@ type HandleEventSelectionCallback = (events: EventId[]) => void
 
 interface EventSelectorProps {
   handleEventSelection: HandleEventSelectionCallback
-  initialSelected: EventId[]
+  selected: EventId[]
   events: EventId[]
   size: IconSize
 }
 
 export default function EventSelector({
   handleEventSelection,
+  selected,
   events,
-  initialSelected,
   size = '2x',
 }: EventSelectorProps) {
-  const [selectedEvents, setSelectedEvents] =
-    useState<EventId[]>(initialSelected)
-
   const handleEventToggle = (event: EventId) => {
-    if (selectedEvents.includes(event)) {
-      const newEvents = selectedEvents.filter(
+    if (selected.includes(event)) {
+      const newEvents = selected.filter(
         (selectedEvent) => selectedEvent !== event
       )
-      setSelectedEvents(newEvents)
       handleEventSelection(newEvents)
     } else {
-      const newEvents = [...selectedEvents, event]
-      setSelectedEvents(newEvents)
+      const newEvents = [...selected, event]
       handleEventSelection(newEvents)
     }
   }
 
   const setAllEvents = () => {
-    setSelectedEvents(events)
     handleEventSelection(events)
   }
 
   const clearAllEvents = () => {
-    setSelectedEvents([])
     handleEventSelection([])
   }
 
   return (
     <div className="event-selection-container">
       <div className="side-bar">
-        Events ({selectedEvents.length}) <br />
+        Events ({selected.length}) <br />
         <button className="all-button" onClick={setAllEvents}>
           {' '}
           All{' '}
@@ -64,7 +57,7 @@ export default function EventSelector({
           <label key={wcaEvent} className="event-label">
             <CubingIcon
               event={wcaEvent}
-              selected={selectedEvents.includes(wcaEvent)}
+              selected={selected.includes(wcaEvent)}
               size={size}
             />
             <input
