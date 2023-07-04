@@ -9,7 +9,7 @@ describe('EventSelector', () => {
         handleEventSelection={() => {}}
         events={['333']}
         size="2x"
-        initialSelected={[]}
+        selected={[]}
       />
     )
   })
