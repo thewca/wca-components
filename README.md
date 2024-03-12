@@ -4,7 +4,8 @@ The React Component Library for the WCA
 # Usage
 1. Install the library as a npm package with `npm install @thewca/wca-components`
 2. Import the component you want to use with `import { CubingIcon } from "@thewca/wca-components"`
-3. Import the styles in your app with `import '@thewca/wca-components/dist/index.esm.css'`
+3. Import the styles in your app with `import '@thewca/wca-components/dist/index.esm.css'` or
+4. Import only a single stylesheet if you want to keep your css bundle small with `import '@thewca/wca-components/dist/css/component/{component}/index.css'`
 
 # Contributing
 ## Working on Existing Components
