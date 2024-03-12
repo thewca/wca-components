@@ -11,6 +11,7 @@
 .event-bar {
   display: flex;
   padding-left: 15px;
+  flex-wrap: wrap;
 }
 .event-selector-button {
   cursor: pointer;
